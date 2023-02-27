@@ -17,7 +17,7 @@ function App() {
   
   return (
     <div className="app">
-      <SushiContainer sushiList={sushiList} setBudget={setBudget}/>
+      <SushiContainer sushiList={sushiList} setBudget={setBudget} budget={budget}/>
       <Table budget={budget}/>
     </div>
   );

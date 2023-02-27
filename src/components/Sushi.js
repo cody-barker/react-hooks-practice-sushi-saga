@@ -1,16 +1,14 @@
 import React from "react";
 
-function Sushi({sushi, setBudget}) {
+function Sushi({sushi, setBudget, budget}) {
 
   function handleEat(e){
     //setBudget(budget => (budget - sushi.price))
-    setBudget(budget => {
-      if (budget - sushi.price > 0) {
+      if (sushi.price < budget) {
         e.target.alt = ""
         e.target.src = ""
-        return (budget - sushi.price)
+        setBudget(budget - sushi.price)
       }
-    })
   }
 
   return (
